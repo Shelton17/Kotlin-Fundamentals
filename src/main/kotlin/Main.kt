@@ -1,7 +1,24 @@
-fun main(args: Array<String>) {
+fun main() {
+//  outputing varios strings
     println("Hello World!")
+    println("I'm Awesome")
+//  variables in kotlin
+    var myVariable: Int = 5
+    println(myVariable)
+    println("The value of our vaiable is: $myVariable")
+    myVariable = 1
+    println("The value is now: $myVariable")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+//  boolean variables
+    var booVariable: Boolean = true
+    println("The value of our vaiable is: $booVariable")
+    booVariable = false
+    println("The value is now: $booVariable")
+
+//  assignment: saving my age and favorite number
+    var ageVariable: Int = 23
+    println("I am $ageVariable years old")
+    var favNumber: Int = 17
+    println("My favorite number is $favNumber")
+
 }

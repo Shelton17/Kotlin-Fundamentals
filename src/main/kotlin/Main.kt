@@ -55,4 +55,14 @@ fun main() {
 
     val myName = "Shelly"
     println("This is my name, in uppercase and reversed: ${myName.toUpperCase().reversed()}")
+
+//    Logical operators
+    val a = 5
+    val b = 5
+
+    val c = 6
+    val d = 10
+    println(a == b && c == d)
+    println(a == b || c == d)
+
 }

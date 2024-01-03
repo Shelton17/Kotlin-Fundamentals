@@ -1,11 +1,13 @@
 import java.util.*
 
 fun main() {
-    allAboutVariables()
-    arithmeticOperators()
-    kotlinStrings()
-    logicalOperators()
-    conditions()
+//    allAboutVariables()
+//    arithmeticOperators()
+//    kotlinStrings()
+//    logicalOperators()
+//    conditions()
+//    userInputs()
+    arraysInKotlin()
 }
 
 //    Conditions
@@ -112,4 +114,32 @@ fun allAboutVariables(){
     println("My favorite number is $favNumber")
     println("I am $ageVariable years old and my favoritee number is $favNumber")
 
+}
+
+//Nullable values and user input in Kotlin
+fun userInputs(){
+    val userInput = readLine()
+    println("You entered $userInput")
+    println(userInput?.uppercase())// the question mark ensures that the variable is not null
+    //working with user input as integers
+    if (userInput != null)
+        println(userInput.toInt() - 5)
+
+    fun userInputExercise(){
+        print("Please enter your age: ")
+        val ageInput = readLine()
+        if (ageInput != null){
+            if (ageInput.toInt()<18){
+                println("You are a baby")
+            }else{
+                println("You're an adult")
+            }
+        }
+    }
+    userInputExercise()
+}
+//arrays
+fun arraysInKotlin(){
+    val myArray = arrayOf("hello","guys", "whats up?")
+    println(myArray[1])
 }

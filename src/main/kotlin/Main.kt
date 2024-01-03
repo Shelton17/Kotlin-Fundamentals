@@ -1,3 +1,5 @@
+import java.util.*
+
 fun main() {
 //      outputing varios strings
     println("Hello World!")
@@ -47,5 +49,10 @@ fun main() {
     val pi = 3.14159F
     var sphereVolume = 0.75 * pi * Math.pow(myRadius,3.0)
     println("The volume of the sphere with the radius 5.5 is $sphereVolume")
+//    Strings
+    val string = "This is a sample text"
+    println("Our string is: ${string.uppercase(Locale.getDefault())}")
 
+    val myName = "Shelly"
+    println("This is my name, in uppercase and reversed: ${myName.toUpperCase().reversed()}")
 }

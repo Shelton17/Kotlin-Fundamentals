@@ -8,7 +8,9 @@ fun main() {
 //    conditions()
 //    userInputs()
 //    arraysInKotlin()
-    forLoops()
+//    forLoops()
+//    understandingLists()
+    whenKeyword()
 }
 
 //    Conditions
@@ -231,6 +233,7 @@ fun forLoops(){
             var avg = 0.0
             for (i in 1..5){
                 var input = readLine()?.toInt()
+
                 if(input != null){
                     avg += input / 5.0
                 }
@@ -241,4 +244,62 @@ fun forLoops(){
         averageOfNumbers()
     }
     forLoopExercise()
+}
+
+fun understandingLists(){
+    val array = arrayOf(1,2,3) //values cannot be changed during run time
+   // val list = listOf(1,2,3) //values cannot be changed during run time
+
+    //mutable lists can change nad you can add or remove at run time but with arrays you cannot
+    val mutableList = mutableListOf(1,2,3)
+
+    mutableList.add(4)
+    //print(mutableList)
+
+//    val list = mutableListOf<Int>()
+//    for (i in 1..10){
+//        val x = readLine()?.toInt()
+//        if (x != null){
+//            list.add(x)
+//        }
+//    }
+//    println(list)
+    fun listExercise(){
+        var numList = mutableListOf<Int>()
+        println("Please enter 5 number")
+        for (i in 1..5){
+            val item = readLine()?.toInt()
+            if (item != null){
+                numList.add(item)
+            }
+        }
+
+        println("The 5 numbers in reverse order are:")
+        for (i in numList.size-1 downTo 0){
+            println(numList[i])
+        }
+        println("Enter a number n > 1:")
+    val listSize = readLine()?.toInt()
+    var fibbList = mutableListOf<Int>(0,1)
+    if (listSize != null){
+        for (i in 2..listSize-1){
+            fibbList.add(fibbList[i-2] + fibbList[i-1])
+        }
+    }
+    println(fibbList)
+
+    }
+    listExercise()
+}
+fun whenKeyword(){
+    val age = readLine()?.toInt()
+    //when is more like case and is dependent on a single variable
+    when(age){
+        in 0..5 -> println("You're a young kid")
+        in 6..17 -> println("You're a teenager")
+        18 -> println("Finally, you're 18")
+        19,20 -> println("You're a young adult")
+        in 21..65 -> println("You're an adult")
+        else -> println("You're a senior citizen")
+    }
 }

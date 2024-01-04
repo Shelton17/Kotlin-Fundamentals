@@ -184,7 +184,20 @@ fun arraysInKotlin(){
         println("$number1 to the power of $number2 is $result")
 
     }
-    whileLoopExercise()
+    fun dailyPushups(){
+        var initalPushup = 50
+        var i = 1
+        while (i<365){
+            initalPushup += 10
+            if (initalPushup == 500){
+                println("You get to 500 pushups on day $i")
+            }
+            i++
+        }
+        println("The number of pushups i'll be doing on 31st December: $initalPushup")
+    }
+    dailyPushups()
+    //whileLoopExercise()
 }
 
 fun forLoops(){

@@ -7,7 +7,8 @@ fun main() {
 //    logicalOperators()
 //    conditions()
 //    userInputs()
-    arraysInKotlin()
+//    arraysInKotlin()
+    forLoops()
 }
 
 //    Conditions
@@ -201,5 +202,8 @@ fun arraysInKotlin(){
 }
 
 fun forLoops(){
-
+    val myArray = arrayOf(1,2,3)
+    for(i in myArray){
+        println(i)
+    }
 }

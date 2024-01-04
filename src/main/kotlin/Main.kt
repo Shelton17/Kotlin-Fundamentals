@@ -142,4 +142,51 @@ fun userInputs(){
 fun arraysInKotlin(){
     val myArray = arrayOf("hello","guys", "whats up?")
     println(myArray[1])
+
+//    While Looping
+    var x = 0
+    while (x<3){
+        println("Looping")
+        x ++ //increment to ensure the while loop can be broken
+    }
+
+    var myArrayLength = myArray.size
+    var i = 0
+    while (i <myArrayLength){
+        println(myArray[i])
+        i++
+    }
+    fun whileLoopExercise(){
+        println("Please enter a number:")
+        var number = readLine()?.toInt()
+
+        if (number != null){
+            if (number >= 0){
+                println("Let's count from 10 down to 0:")
+                while(number >= 0){
+                    println(number)
+                    number--
+                }
+            }
+        }
+
+        println("Enter number 1:")
+        var number1 = readLine()?.toInt()
+        println("Enter number 2:")
+        var number2 = readLine()?.toInt()
+        var result: Int = 1
+        var n = 0
+
+        while (number1 != null && number2 != null && n < number2){
+            result *= number1
+            n++
+        }
+        println("$number1 to the power of $number2 is $result")
+
+    }
+    whileLoopExercise()
+}
+
+fun forLoops(){
+
 }

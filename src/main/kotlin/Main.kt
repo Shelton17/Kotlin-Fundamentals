@@ -202,8 +202,43 @@ fun arraysInKotlin(){
 }
 
 fun forLoops(){
-    val myArray = arrayOf(1,2,3)
-    for(i in myArray){
+//    val myArray = arrayOf(1,2,3)
+//    for(i in myArray){
+//        println(i)
+//    }
+    for (i in 1..10)
         println(i)
+    for (i in 20 downTo 0 step 5)
+        println(i)
+
+    val myArray = arrayOf(4,5,8,10,20,6,7)
+    var max = myArray[0]
+
+    for (item in myArray){
+        if (item > max){
+            max = item
+        }
     }
+    fun forLoopExercise(){
+        var sum = 0
+        for (i in myArray){
+            sum += i
+        }
+        println("The sum of the array is $sum")
+
+        fun averageOfNumbers(){
+            println("Enter 5 numbers:")
+            var avg = 0.0
+            for (i in 1..5){
+                var input = readLine()?.toInt()
+                if(input != null){
+                    avg += input / 5.0
+                }
+            }
+            println("The average value is $avg")
+
+        }
+        averageOfNumbers()
+    }
+    forLoopExercise()
 }

@@ -8,6 +8,9 @@ fun main(){
     searchFor("Best Programmer", "Bing")
     //named parameter with this you don't have to have the arguments in the correct order
     searchFor(searchEngine = "Yahoo", search = "How to be a beast")
+
+    val sum = alternatingSum(3,8,9,10,11,12)
+    println("The alternating sum is $sum")
 }
 fun getMax (vararg numbers: Int): Int{
     var max = numbers[0]
@@ -22,4 +25,19 @@ fun getMax (vararg numbers: Int): Int{
 //default values in parameters arguments
 fun searchFor(search: String, searchEngine: String = "Google"){
     println("Searchin for $search on $searchEngine")
+}
+
+//vararg assignment
+fun alternatingSum(vararg numbers: Int): Int{
+    var sum = 0
+    var toggle = true
+    for(n in numbers){
+        if (toggle){
+            sum += n
+        }else{
+            sum -= n
+        }
+        toggle = !toggle
+    }
+    return sum
 }

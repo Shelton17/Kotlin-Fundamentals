@@ -9,6 +9,10 @@ fun main(){
            println("The number is not a prime number")
        }
     }
+
+    val list = listOf(2,3,4,5)
+    var product = list.product()
+    println("The product of $list is $product")
 }
 
 fun Int.isPrime(): Boolean{
@@ -18,4 +22,12 @@ fun Int.isPrime(): Boolean{
         }
     }
     return true
+}
+
+fun List<Int>.product(): Int{
+    var listProduct = 1
+    for (i in this-1){
+        listProduct *= i
+    }
+    return listProduct
 }

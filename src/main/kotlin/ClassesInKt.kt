@@ -3,4 +3,6 @@ fun main(){
     println("Rectangle area is ${myRect.area()}")
     println("Rectangle perimeter is ${myRect.perimeter()}")
     println("Is rectangle a square? ${myRect.isSquare()}")
+    val myTri = Triangle(3.0,5.0,16.0)
+
 }

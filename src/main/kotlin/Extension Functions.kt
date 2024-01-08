@@ -1,0 +1,21 @@
+fun main(){
+    println("Please enter a number")
+    val input = readLine()?.toInt()
+
+    if (input != null){
+       if (input.isPrime()){
+           println("The number $input is a prime number")
+       } else{
+           println("The number is not a prime number")
+       }
+    }
+}
+
+fun Int.isPrime(): Boolean{
+    for (i in 2 until this - 1){
+        if (this % i == 0){
+            return false
+        }
+    }
+    return true
+}
